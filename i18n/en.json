@@ -81,5 +81,32 @@
     "sectionSafety": "Safety",
     "sectionKeepingInTouch": "Keeping in touch",
     "sectionAccessibility": "Accessibility"
+  },
+  "setupChecklist": {
+    "progressLabel": "{{done}} of {{total}} done",
+    "optionalLabel": "Optional",
+    "android": {
+      "title": "Android setup checklist",
+      "item0": "Notifications allowed, including full-screen alerts and DND override for the SOS channel",
+      "item1": "Location: \"Allow all the time\", precise",
+      "item2": "Battery: Unrestricted; remove from \"sleeping\" or \"optimized\" lists (Samsung: \"Never auto sleeping apps\")",
+      "item3": "Brand-specific steps where needed (Xiaomi, Oppo, Vivo, Realme, Infinix have extra auto-start and background limits)",
+      "item4": "SOS widget on the home screen",
+      "item5": "Recommend turning on the phone's built-in Emergency SOS as a separate backup",
+      "item6": "Turn on automatic app updates in Google Play",
+      "item7": "Pair a Wear OS watch for SOS from the wrist, if the Primary has one",
+      "item8": "Turn on voice commands and Bluetooth hearing-aid audio streaming, if wanted"
+    },
+    "iphone": {
+      "title": "iPhone setup checklist",
+      "item0": "Notifications allowed; Critical Alerts allowed (once approved); Time Sensitive allowed",
+      "item1": "Location: \"Always\", precise",
+      "item2": "Background App Refresh on",
+      "item3": "Add the app to Focus-mode allow-lists; set the Primary as an Emergency Bypass contact in Contacts",
+      "item4": "SOS widget and Control Center control added",
+      "item5": "Turn on automatic app updates in the App Store",
+      "item6": "Pair an Apple Watch for SOS from the wrist, if the Primary has one",
+      "item7": "Turn on voice commands and Made-for-iPhone hearing-aid audio streaming, if wanted"
+    }
   }
 }

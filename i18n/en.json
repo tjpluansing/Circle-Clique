@@ -1,0 +1,67 @@
+{
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "save": "Save",
+    "skip": "Skip",
+    "next": "Next",
+    "getStarted": "Get started",
+    "edit": "Edit",
+    "delete": "Delete",
+    "today": "Today",
+    "followDoctorsInstructions": "These are general reminders. Follow your doctor's instructions if they differ."
+  },
+  "sos": {
+    "title": "SOS",
+    "countdownAnnouncement": "Alerting {{circleName}}",
+    "cancelButton": "Cancel",
+    "disclaimer": "This app supplements calling emergency services. It never replaces it.",
+    "alertSentTitle": "Alert sent",
+    "alertSentBody": "{{names}} notified with your location",
+    "testModeLabel": "Test SOS",
+    "respondingButton": "I'm responding",
+    "resolveButton": "Resolve"
+  },
+  "geofence": {
+    "settingsTitle": "Safe zones",
+    "leftZoneTitle": "{{patientName}} left {{zoneName}}",
+    "returnedZoneTitle": "{{patientName}} returned to {{zoneName}}",
+    "notAnEmergencyLabel": "SAFE ZONE ALERT · not an emergency",
+    "radiusLabel": "Radius",
+    "graceLabel": "Alert after leaving for",
+    "graceHint": "A short grace period avoids a false alert from GPS drift at the edge of the zone."
+  },
+  "watch": {
+    "settingsTitle": "Smartwatch SOS",
+    "pairCta": "Pair a watch",
+    "neverAlertsAlone": "A watch tap never sends an alert by itself.",
+    "complicationLabel": "Complication",
+    "tileLabel": "Tile"
+  },
+  "weeklySummary": {
+    "title": "Weekly summary",
+    "scheduleLabel": "Sunday 6:00 PM",
+    "saveAsPdf": "Save as PDF",
+    "disclaimer": "Numbers only, never advice: this reports what happened, not what to do about it."
+  },
+  "notes": {
+    "title": "Care notes",
+    "addTitle": "Add a note",
+    "careNoteTab": "Care note",
+    "handoverTab": "Caregiver handover",
+    "postCareNote": "Post note",
+    "postHandover": "Post handover",
+    "visibilityNotice": "Everyone with access to {{patientName}} will see this. It is not a medical record — conditions, allergies and medications are still edited on their own screens."
+  },
+  "accessibility": {
+    "title": "Voice commands and hearing aids",
+    "voiceCommandsLabel": "Voice commands",
+    "hearingAidLabel": "Hearing-aid Bluetooth audio"
+  },
+  "settings": {
+    "title": "Settings",
+    "sectionSafety": "Safety",
+    "sectionKeepingInTouch": "Keeping in touch",
+    "sectionAccessibility": "Accessibility"
+  }
+}

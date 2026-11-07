@@ -1,25 +1,44 @@
 {
   "expo": {
-    "name": "care-circle-app",
-    "slug": "care-circle-app",
+    "name": "Circle Clique",
+    "slug": "circle-clique-app",
+    "scheme": "circleclique",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "plugins": [["expo-router", { "root": "./src/app" }]],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.circleclique.app",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
+      "package": "com.circleclique.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#FFF4E8",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
+      }
+    },
+    "updates": {
+      "url": "REPLACE_WITH_EAS_UPDATE_URL"
     }
   }
 }

@@ -11,6 +11,15 @@
     "today": "Today",
     "followDoctorsInstructions": "These are general reminders. Follow your doctor's instructions if they differ."
   },
+  "welcome": {
+    "brand": "Circle Clique",
+    "heroAlt": "Three family photos in a circle",
+    "headline": "Look after the people you love, together",
+    "subhead": "Health records, appointments, reminders and a one-tap emergency alert for your family.",
+    "settingUpCta": "I'm setting up care for someone",
+    "haveInviteCta": "I have an invite",
+    "legalNotice": "By continuing you agree to the Terms and Privacy Notice. This app helps your family respond. It does not replace calling 911."
+  },
   "sos": {
     "title": "SOS",
     "countdownAnnouncement": "Alerting {{circleName}}",

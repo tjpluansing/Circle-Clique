@@ -34,7 +34,7 @@ Per-platform **Setup Checklists** are in section 11.
 | Over-the-air updates | **EAS Update** (`expo-updates`) | See section 8. |
 | Backend | Supabase (Postgres, Auth, Storage, Edge Functions) | Row-level security (RLS) on every table. |
 | Push | `expo-notifications` with FCM (Android) and APNs (iOS) | Includes iOS Critical Alerts once approved. |
-| SMS and voice | Twilio, or a Philippine provider such as Semaphore for SMS | Must reach contacts who do not have the app. |
+| SMS and voice | **Twilio** (Twilio Verify for OTP, including the voice-call fallback) | Must reach contacts who do not have the app. Chosen over a Philippine-only provider like Semaphore because Supabase Auth's phone-login provider list natively supports Twilio (and MessageBird/Vonage), not Semaphore — a non-native provider would need a custom Edge Function integration instead of the built-in flow. |
 | Printing and PDF | `expo-print` and `expo-sharing` | See section 9. |
 | Maps | Google Maps Platform: Maps SDK for Android and iOS (via `react-native-maps` with the Google provider), Places API for address search, and Google Maps links for directions | See section 8D. Keys are restricted per app and kept out of the code. |
 | Storage | Supabase Storage, private buckets, signed URLs | Scans, PDFs, ID card photos. |
@@ -171,7 +171,7 @@ One account can look after as many Primaries as needed.
 - 6-digit code, expires in 10 minutes, limited attempts and resends per number and device, rate limits per IP.
 - Auto-read the code (Android SMS Retriever, iOS one-time-code autofill) so older users do not type it.
 - Offer **"Call me with the code"** (voice) as a fallback, especially for the Primary.
-- Provider: Supabase phone auth with Twilio Verify, or a Philippine provider. **Test delivery to the real numbers in Circle #1 in Phase 0** (Philippine carriers may require registered sender IDs). Consider a Viber or WhatsApp code channel as a backup.
+- Provider: Supabase phone auth with **Twilio Verify**. **Test delivery to the real numbers in Circle #1 in Phase 0** (Philippine carriers may require registered sender IDs). Consider a Viber or WhatsApp code channel as a backup.
 - After signing in, the app locks behind a PIN or biometric. Role changes, exports, and removing members ask for it again.
 - **New phone:** re-verify the number; the old device is signed out and its push tokens removed. Admin can remove any member's device at any time.
 - Linking a Google or Apple account never changes the verified phone number, and a phone-number change needs a new code sent to the new number.
@@ -623,7 +623,7 @@ For printing, provide a **print-safe palette** (teal headings, black text, white
 - [ ] Initialize Expo + TypeScript, EAS Build and **EAS Update channels** (`development`, `staging`, `production`), lint, tests
 - [ ] Platform abstraction layer (`src/platform/`) and design tokens and i18n structure
 - [ ] Supabase schema and RLS for Phase 1 tables, including `circle_members` roles and `is_admin`
-- [ ] **Sign-in setup:** phone OTP provider (Supabase phone auth + Twilio Verify or a Philippine provider), SMS sender registration, Google and Apple sign-in configuration
+- [ ] **Sign-in setup:** phone OTP provider (Supabase phone auth + Twilio Verify), SMS sender registration, Google and Apple sign-in configuration
 - [ ] **Test OTP delivery** (SMS and voice) to the real phones in Circle #1, including the +1 Canadian number
 - [ ] **Google Maps Platform** (section 8D): project, billing, restricted API keys per platform, Places API enabled
 - [ ] Decide the Android widget approach (config plugin library vs Jetpack Glance) with a one-screen prototype on the Galaxy A35
